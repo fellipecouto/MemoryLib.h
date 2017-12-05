@@ -1,0 +1,4 @@
+MemoryLib	KEYWORD1
+write	KEYWORD2
+read	KEYWORD2
+lastAddress	KEYWORD2
