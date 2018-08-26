@@ -41,7 +41,7 @@ void MemoryLib::write(int address, long value) {
     EEPROM.write(address + 1, loByte);
   } else if (_typeVar == 32) {
     String val = "0000000000" + String(value);
-    val = val.substring(String(value).length(), 10 + String(value).length
+    val = val.substring(String(value).length(), 10 + String(value).length());
     EEPROM.write(address, val.substring(0, 2).toInt());
     EEPROM.write(address + 1, val.substring(2, 4).toInt());
     EEPROM.write(address + 2, val.substring(4, 6).toInt());
