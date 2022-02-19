@@ -1,10 +1,10 @@
-/*----------------------------------------------------------
- Programa : MEMORYLIB
- Descr    : Biblioteca para gerenciar o armazenamento de
-            variaveis dos tipos INT e LONG na memoria EEPROM
- Autor    : Fellipe Couto [ http://www.efeitonerd.com.br ]
- Data     : 27/06/2014
- ----------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+  Program  : MemoryLib.h
+  Descr    : Library to manage the storage of INT and LONG variables in EEPROM 
+  Author   : Fellipe Couto [ http://www.efeitonerd.com.br ]
+  GitHub   : https://github.com/fellipecouto/MemoryLib.h
+  Date     : 2014-06-27
+  ------------------------------------------------------------------------------*/
 #ifndef MemoryLib_h
 #define MemoryLib_h
 #include "Arduino.h"
