@@ -1,5 +1,6 @@
 # MemoryLib.h
-Biblioteca para gerenciar o armazenamento de variáveis dos tipos INT e LONG na memória EEPROM do Arduino
+Library to manage the storage of INT and LONG variables in EEPROM
 
-Autor    : Fellipe Couto [ http://www.efeitonerd.com.br ]
-Data     : 27/06/2014
+Author : Fellipe Couto [ http://www.efeitonerd.com.br ]
+
+Date : 2014-06-27
