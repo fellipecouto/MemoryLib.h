@@ -22,9 +22,9 @@ MemoryLib::MemoryLib(int sizeMemory, int typeVar) {
   }
   if (EEPROM.read(sizeMemory - 1) != _typeVar) { //Clear EEPROM - Last address with 16-int ou 32-long
     for (int i = 0; i < sizeMemory; i++) {
-      EEPROM.write(i, 0);
+      EEPROM.update(i, 0);
     }
-    EEPROM.write(sizeMemory - 1, _typeVar);
+    EEPROM.update(sizeMemory - 1, _typeVar);
   }
 }
 
@@ -39,16 +39,16 @@ void MemoryLib::write(int address, long value) {
   if (_typeVar == 16) {
     byte hiByte = highByte(value);
     byte loByte = lowByte(value);
-    EEPROM.write(address, hiByte);
-    EEPROM.write(address + 1, loByte);
+    EEPROM.update(address, hiByte);
+    EEPROM.update(address + 1, loByte);
   } else if (_typeVar == 32) {
     String val = "0000000000" + String(value);
     val = val.substring(String(value).length(), 10 + String(value).length());
-    EEPROM.write(address, val.substring(0, 2).toInt());
-    EEPROM.write(address + 1, val.substring(2, 4).toInt());
-    EEPROM.write(address + 2, val.substring(4, 6).toInt());
-    EEPROM.write(address + 3, val.substring(6, 8).toInt());
-    EEPROM.write(address + 4, val.substring(8, 10).toInt());
+    EEPROM.update(address, val.substring(0, 2).toInt());
+    EEPROM.update(address + 1, val.substring(2, 4).toInt());
+    EEPROM.update(address + 2, val.substring(4, 6).toInt());
+    EEPROM.update(address + 3, val.substring(6, 8).toInt());
+    EEPROM.update(address + 4, val.substring(8, 10).toInt());
   }
 }
 
